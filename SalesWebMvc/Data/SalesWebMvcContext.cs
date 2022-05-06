@@ -13,6 +13,17 @@ namespace SalesWebMvc.Models
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            ///modelBuilder.Entity<Department>(entity =>
+            //{
+                //entity.Property(e => e.Id)
+                //    .ValueGeneratedNever();
+                    //.HasColumnName("ID");
+            //});
+
+        }
+
         public DbSet<Department> Department { get; set; }
         public DbSet<Seller> Seller { get; set; }
         public DbSet<SalesRecord> SalesRecord { get; set; }
